@@ -1,0 +1,54 @@
+ul { 
+    list-style: none;
+    display: flex;
+    gap: 2px;
+}
+
+li {
+    width: calc(200px - 24px);
+    max-width: 200px;
+    cursor: pointer;
+    background-color: #111;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    padding: 12px 24px;
+    text-align: center;
+}
+
+ul ul {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+
+li:hover {
+    transition: background-color 0.3s ease-in, opacity 0.3s ease-in;
+    background-color: #dd4803cc;
+}
+
+#forum:hover ul,
+#support:hover ul {
+
+    visibility: visible;
+    opacity: 100;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
